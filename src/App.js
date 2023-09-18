@@ -19,7 +19,7 @@ function App() {
       body: JSON.stringify({ sentence: inputData }),
     })
       .then((res) => res.json())
-      .then((data) => setreceivedData(data.message));
+      .then((data) => setreceivedData(data.result));
   };
 
   const sendToServerToMorse = () => {
@@ -31,7 +31,7 @@ function App() {
       body: JSON.stringify({ sentence: inputData }),
     })
       .then((res) => res.json())
-      .then((data) => setreceivedData(data.message));
+      .then((data) => setreceivedData(data.result));
   };
 
   React.useEffect(() => {
