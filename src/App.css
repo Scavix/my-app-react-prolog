@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(155, 122, 73);
+}
 .App {
   text-align: center;
 }
@@ -18,7 +21,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(155, 122, 73);
 }
 
 input {
