@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Node and React Prolog Morse code transliterator</h1>
+      <p className="titl">Node and React Prolog Morse code transliterator</p>
       <div className="translator">
         <input
           type="text"
@@ -58,7 +58,7 @@ function App() {
             onClick={sendToServerToMorse()}
           >Text to Morse</button>
         </div>
-        <p>{!receivedData ? "Loading..." : receivedData}</p>
+        <p className="res">{!receivedData ? "Loading..." : receivedData}</p>
       </div>
     </div>
   );

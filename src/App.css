@@ -6,7 +6,7 @@
   color: #61dafb;
 }
 
-h1 {
+.titl {
   font-size: 3rem;
   color: rgb(162, 183, 190);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -42,7 +42,7 @@ button {
   margin:1%;
 }
 
-p{
+.res{
   font-size: 1.5rem;
   color: rgb(50, 37, 107);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
