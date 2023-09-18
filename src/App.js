@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  const [inputData, setinputData] = React.useState("Hello world!");
+  const [inputData, setinputData] = React.useState("Hello world");
   const [receivedData, setreceivedData] = React.useState(null);
   const url = "https://morse-prolog.onrender.com/";
 
@@ -11,12 +11,13 @@ function App() {
   };
 
   const sendToServerFromMorse = () => {
+    console.log(inputData.split(","));
     fetch(url + "apiFromMorse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ sentence: inputData }),
+      body: JSON.stringify({ sentence: inputData.split(",") }),
     })
       .then((res) => res.json())
       .then((data) => setreceivedData(data.result));
@@ -52,10 +53,10 @@ function App() {
         />
         <div className="buttons">
           <button
-            onClick={sendToServerFromMorse()}
+            onClick={sendToServerFromMorse}
           > Morse to Text</button>
           <button
-            onClick={sendToServerToMorse()}
+            onClick={sendToServerToMorse}
           >Text to Morse</button>
         </div>
         <p className="res">{!receivedData ? "Loading..." : receivedData}</p>
