@@ -11,13 +11,12 @@ function App() {
   };
 
   const sendToServerFromMorse = () => {
-    console.log(inputData.split(","));
     fetch(url + "apiFromMorse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ sentence: inputData.split(",") }),
+      body: JSON.stringify({ sentence: inputData.split(" ") }),
     })
       .then((res) => res.json())
       .then((data) => setreceivedData(data.result));
@@ -29,7 +28,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ sentence: inputData }),
+      body: JSON.stringify({ sentence: inputData.toLowerCase() }),
     })
       .then((res) => res.json())
       .then((data) => setreceivedData(data.result));
